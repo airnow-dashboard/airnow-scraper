@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "moduleResolution": "node",
+    "target": "es2018",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "outDir": "dist",
+    "sourceMap": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

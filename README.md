@@ -2,7 +2,7 @@
 
 ## Overview
 
-A simple scraper for downloading air quality data of US embassies and consulates (AirNow DOS) from [AirNow Department of State](https://www.airnow.gov/international/us-embassies-and-consulates) in bulk.
+A simple scraper for downloading air quality data of US embassies and consulates from [AirNow Department of State](https://www.airnow.gov/international/us-embassies-and-consulates) (AirNow DOS) in bulk.
 
 ## Structure
 

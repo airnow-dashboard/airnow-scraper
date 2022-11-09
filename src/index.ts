@@ -33,8 +33,8 @@ const fetch = async () => {
         console.log(`Downloading ${url}`);
         const response = await axios.get(url);
 
-        const data = response.data;
-        const filePath = outputFolder + response.request.path;
+        const {data, request} = response;
+        const filePath = outputFolder + request.path;
         const folderPath = path.dirname(filePath)
 
         await fs.promises.mkdir(folderPath, { recursive: true }).catch(console.error);

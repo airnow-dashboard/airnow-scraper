@@ -14,8 +14,10 @@ A simple scraper for downloading air quality data of US embassies and consulates
 Requires node.js 16 and TypeScript.
 
 ```bash
-yarn start
+yarn start {fetch-type}
 ```
+
+Currently, `current` or `historical` are supported.
 
 Alternatively, you can build it into a docker image and create a container with mounted volume. Make sure the folder to be binded (`source`) exists.
 

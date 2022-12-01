@@ -24,22 +24,9 @@ export class DailyFetcher implements BaseFetcher {
     }
 
     async fetch(): Promise<void> {
-
         const locations = await getLocationData(this.startUrl);
-        const patternToMatch = /\.xml/g;
-
-        for (const key in locations) {
-            const monitors: DailyMonitor[] = locations[key].monitors;
-            for (const monitor of monitors) {
-                const outputFilename: string = path.join(
-                    this.outputDest,
-                    this.getPathFromRss(monitor).replace(patternToMatch, ".json")
-                )
-                // serialize JSON data
-                const data = JSON.stringify(monitor);
-                await writeToPath(data, outputFilename);
-            }
-        }
+        const data = JSON.stringify(locations);
+        await writeToPath(data, path.join(this.outputDest, 'AllPosts24Hour.json'));
         return Promise.resolve(undefined);
     }
 

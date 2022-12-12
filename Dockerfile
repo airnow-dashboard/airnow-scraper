@@ -10,4 +10,4 @@ COPY . /app
 
 RUN yarn build
 
-CMD ["node", "dist/"]
+ENTRYPOINT ["node", "dist/"]
